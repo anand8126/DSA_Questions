@@ -38,37 +38,35 @@ const lengthOfTree = (root) => {
   const leftHeight = lengthOfTree(root.left);
   const rightHeight = lengthOfTree(root.right);
 
-  if(leftHeight > rightHeight){
-    return leftHeight +1;
-  }
-  else {
-    return rightHeight +1;
+  if (leftHeight > rightHeight) {
+    return leftHeight + 1;
+  } else {
+    return rightHeight + 1;
   }
 };
 
-
-const levelOrderTraversal = (root) =>{
-  if(root === null){
+const levelOrderTraversal = (root) => {
+  if (root === null) {
     return root;
   }
 
-  const ans=[];
-  const queue=[root];
+  const ans = [];
+  const queue = [root];
 
-  while(queue.length > 0){
-    const current =queue.shift();
+  while (queue.length > 0) {
+    const current = queue.shift();
     ans.push(current.value);
 
-    if(current.left){
+    if (current.left) {
       queue.push(current.left);
     }
 
-    if(current.right){
+    if (current.right) {
       queue.push(current.right);
     }
   }
   return ans;
-}
+};
 
 const root = new Node(10);
 root.left = new Node(20);
@@ -81,5 +79,4 @@ root.right.right = new Node(70);
 // preOrderTraversal(root);
 // postOrderTraversal(root);
 // console.log("The Height of tree ",lengthOfTree(root));
-console.log("Leval Order Traversal ",levelOrderTraversal(root));
-
+console.log("Leval Order Traversal ", levelOrderTraversal(root));
