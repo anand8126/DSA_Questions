@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insertion</title>
+    <script>
+        // let arr = [8,6,5,34,52];
+        // let newElm=35;
+        // let postion=3;
+
+        // for(let i= arr.length-1; i>=0; i--){
+        //     console.log(arr[i])
+        //     if(i >= postion){
+        //         arr[i+1]=arr[i];
+        //         if(i== postion){
+        //             arr[i]=newElm;
+        //         }
+        //     }
+        // }
+
+        // console.log(arr);
+
+        function InsertArr(){
+        let arr = [8,6,5,34,52];
+        let newElm=document.getElementById('newElm').value;
+        newElm = parseInt(newElm);
+        let postion=document.getElementById('position').value;
+
+        for(let i= arr.length-1; i>=0; i--){
+            console.log(arr[i])
+            if(i >= postion){
+                arr[i+1]=arr[i];
+                if(i== postion){
+                    arr[i]=newElm;
+                }
+            }
+        }
+        console.log(arr);
+     }
+    </script>
+</head>
+<body>
+    <input type="text" id="position" placeholder="position" >
+    <input type="text" id="newElm" placeholder=" new element " >
+    <button onclick="InsertArr()">Insert Array</button>
+</body>
+</html>

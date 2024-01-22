@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Array Traversal</title>
+    <script>
+        let arr=[10,2,3,4,5,6,7,8,9,0];
+        document.write(arr);
+        
+        function getElement(){
+            let ele= document.getElementById('inputs').value;
+            if(ele < arr.length && typeof parseInt(ele) === 'number'){
+                
+                alert(arr[ele])
+            }
+            else{
+                alert("Please enter valid Data");
+            }
+        }
+    </script>
+</head>
+<input type="text" id="inputs">
+<button onclick="getElement()">Get Methods</button>
+<body>
+
+</body>
+
+</html>

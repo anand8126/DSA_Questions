@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Array Merge Two </title>
+</head>
+<body>
+
+    <h3>Tow Merge Sort Array  dynamic</h3>
+    <input type="text" id="arr1" placeholder="Enter the First Array">
+    <input type="text" id="arr2" placeholder="Enter the Second Array">
+    <button onclick="getArray();">Get Array</button>
+    <p id="display"></p>
+    <script>
+
+function getArray(){
+
+    let inputArr1 = document.querySelector('#arr1').value;
+        let inputArr2 = document.querySelector('#arr2').value;
+    
+    let arr1 = inputArr1.split(',').map(Number);
+        let arr2 = inputArr2.split(',').map(Number);
+
+
+
+        let arr3=[];
+
+        let len1=arr1.length, len2= arr2.length;
+
+        let i=0, j=0, k=0;
+
+        while(i < len1 && j < len2){
+            if(arr1[i] < arr2[j]){
+
+                arr3[k]=arr1[i];
+                i++;
+            }
+            else{
+                arr3[k]=arr2[j];
+                j++;
+            }
+            k++;
+        }
+
+
+        while(i < len1){
+            arr3[k]=arr1[i];
+            k++, i++;
+        }
+
+
+        while(j < len2){
+            arr3[k]=arr2[j]
+            k++, j++;
+        }
+
+    console.log(`The Two Array ${arr3}`);
+
+  
+
+    let displayEle= document.querySelector('#display');
+    let newHtml ='';
+
+    for(let i=0; i<arr3.length; i++){
+        newHtml+=arr3[i]+' ';
+    }
+    displayEle.innerHTML=newHtml;
+}
+
+
+    //     let arr1=[10, 20, 25, 27, 32, 35, 45];
+    //     let arr2=[10, 12, 15, 18, 50, 60];
+
+    //     let arr3=[];
+
+    //     let len1=arr1.length, len2= arr2.length;
+
+    //     let i=0, j=0, k=0;
+
+    //     while(i < len1 && j < len2){
+    //         if(arr1[i] < arr2[j]){
+
+    //             arr3[k]=arr1[i];
+    //             i++;
+    //         }
+    //         else{
+    //             arr3[k]=arr2[j];
+    //             j++;
+    //         }
+    //         k++;
+    //     }
+
+
+    //     while(i < len1){
+    //         arr3[k]=arr1[i];
+    //         k++, i++;
+    //     }
+
+
+    //     while(j < len2){
+    //         arr3[k]=arr2[j]
+    //         k++, j++;
+    //     }
+
+    // console.log(`The Two Array ${arr3}`);
+
+    </script>
+</body>
+</html>

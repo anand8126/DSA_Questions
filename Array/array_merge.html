@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Merge Array</title>
+</head>
+<body>
+    <script>
+       let arr1=[10,12,15,17,20];
+       let arr2=[75,100,200,50];
+       
+       
+       let arr3=[];
+
+       let len1=arr1.length;
+       let len2=arr2.length;
+
+       console.log(`First Array is ${arr1}`);
+       arr2.reverse();
+       console.log(`Second Array is ${arr2}`);
+       console.log(`Merage array ${[...arr1,...arr2]}`)
+
+       for(let i=0; i<len1; i++){
+        arr3[i]=arr1[i];
+       }
+       for(let j=0; j<len2; j++){
+        arr3[len1+j]=arr2[j];
+       }
+
+       console.log(`Merge Array ${arr3}`);
+    </script>
+</body>
+</html>

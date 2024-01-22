@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Array</title>
+    <script>
+        // let arr= [29,18,3,4,66,83,40,12];
+        // let searchItem= 66;
+        // let index;
+
+        // for(i=0; i<arr.length; i++){
+        //     if(arr[i] === searchItem){
+        //         index=i;
+        //         break;
+        //     }
+        // }
+
+        // console.log(index);
+        // console.log(arr.indexOf(searchItem));
+        // console.log(arr.splice(2,1));
+        // console.log(arr)
+
+
+       function SearchElme(){
+        let arr= [29,18,3,4,66,83,40,12];
+        let searchItem= document.getElementById('searchItem').value;
+        searchItem = parseInt(searchItem);
+        let index=undefined;
+
+        for(i=0; i<arr.length-1; i++){
+            if(arr[i] === searchItem){
+                index=i;
+                break;
+            }
+        }
+
+        console.log(index);
+        console.log(`Array length is ${arr.length}`)
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="searchItem" placeholder=" Search Item in Array">
+    <button onclick="SearchElme()">Search Element</button>
+</body>
+</html>

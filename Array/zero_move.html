@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Move Element End</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 0, 4, 3, 0, 5, 0];
+        let j = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                let tmp = arr[i];
+                arr[i] = arr[j]
+                arr[j] = tmp;
+                j++;
+
+            }
+        }
+        console.log(arr);
+
+    </script>
+</body>
+
+</html>

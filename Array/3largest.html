@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+<link
+rel="stylesheet"
+data-purpose="Layout StyleSheet"
+title="Web Awesome"
+
+href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d"
+>
+
+<link
+  rel="stylesheet"
+
+  href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+>
+
+<link
+  rel="stylesheet"
+
+  href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
+>
+
+<link
+  rel="stylesheet"
+
+  href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
+>
+
+<link
+  rel="stylesheet"
+
+  href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
+>
+
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    let arr=[10, 4, 3, 50, 23, 90]
+
+    let first=second=third=-1;
+
+    for(let index=0; index<arr.length; index++){
+        if(first <arr[index]){
+            second=first;
+            first=arr[index];
+        }
+        else if(arr[index]<second && first!=arr[index]){
+            second=arr[index];
+        }
+    }
+
+    console.log(`Second largest number in Array ${second}`);
+    for(let i=0; i<arr.length; i++){
+        if(arr[i]>first){
+            third=second;
+            second=first;
+            first=arr[i];
+        }
+
+        else if(arr[i]>second && arr[i] !=first){
+            third=second;
+            second=arr[i];
+        }
+
+        else if(arr[i] > third && arr[i] !=second){
+            third=arr[i]
+        }
+    }
+
+    console.log(`${first}  ${second}  ${third}`);
+    </script>
+    
+</body>
+</html>
